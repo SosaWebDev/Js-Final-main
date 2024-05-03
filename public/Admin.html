@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Page</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/admin.js" defer></script>
+</head>
+<body>
+  <div id="app">
+      <header>
+        <nav>
+          <ul>
+              <li><button><a href="index.html">Home</a></button></li>
+              <li><button><a href="menu.html">Menu</a></button></li>
+              <li><button><a href="contact.html">Contact</a></button></li>
+              <li><button><a href="admin.html">Admin</a></button></li>
+          </ul>
+          <h2>Julio's Food Truck</h2>
+          <img src="img/navIcon.png" alt="Food truck icon">
+      </nav>
+      </header>
+    <div class="containerAdmin">
+      <div class="menuColumn">
+        <h2>Add New Menu Item</h2>
+        <form id="menuForm">
+          <label for="menuItemName">Name:</label><br>
+          <input type="text" id="menuItemName" name="menuItemName" required><br>
+          <label for="menuItemDescription">Description:</label><br>
+          <input type="text" id="menuItemDescription" name="menuItemDescription" required><br>
+          <label for="menuItemPrice">Price:</label><br>
+          <input type="number" id="menuItemPrice" name="menuItemPrice" step=".01" min="0" value="0" required><br>
+          <button type="submit">Add Menu Item</button>
+        </form>
+
+        <h2>Existing Menu Items</h2>
+        <ul id="menuItems">
+          <!-- Existing menu items will be displayed here -->
+        </ul>
+
+          <!-- HTML for updating menu item modal -->
+        <div id="updateMenuItemModal" class="modal">
+          <div class="modal-content">
+            <h2>Update Menu Item</h2>
+            <form id="updateMenuItemForm">
+              <label for="menuItemSelect">Select Menu Item:</label><br>
+              <select id="menuItemSelect" name="menuItemSelect" onchange="populateMenuItemFields()">
+                <option>Choose one</option>
+                <!-- Options for menu items will be populated here -->
+              </select><br>
+              <label for="newName">New Name:</label><br>
+              <input type="text" id="newName" name="newName" required><br>
+              <label for="newDescription">New Description:</label><br>
+              <input type="text" id="newDescription" name="newDescription" required><br>
+              <label for="newPrice">New Price:</label><br>
+              <input type="number" id="newPrice" name="newPrice" step=".01" min="0" value="0" required><br>
+              <button type="submit">Update</button>
+              <button type="delete" id="menuItemDelete" class="deleteMenuItem">Delete</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="eventColumn">
+        <h2>Add New Event</h2>
+        <form id="eventForm">
+          <label for="eventName">Name:</label><br>
+          <input type="text" id="eventName" name="eventName" required><br>
+          <label for="eventLocation">Location:</label><br>
+          <input type="text" id="eventLocation" name="eventLocation" required><br>
+          <label for="eventDate">Date:</label><br>
+          <input type="date" id="eventDate" name="eventDate" required><br>
+          <label for="eventHour">Hour:</label><br>
+          <input type="time" id="eventHour" name="eventHour"required><br>
+          <button type="submit">Add Event</button>
+        </form>
+
+        <h2>Existing Events</h2>
+        <ul id="events">
+          <!-- Existing events will be displayed here -->
+        </ul>
+
+          <!-- HTML for updating event modal -->
+        <div id="updateEventModal" class="modal">
+          <div class="modal-content">
+          <h2>Update Event</h2>
+          <form id="updateEventForm">
+            <label for="eventSelect">Select Event:</label><br>
+            <select id="eventSelect" name="eventSelect" onchange="populateEventFields()">
+              <option>Choose one</option>
+              <!-- Options for events will be populated here -->
+            </select><br>
+            <label for="newEventName">New Name:</label><br>
+            <input type="text" id="newEventName" name="newEventName" required><br>
+            <label for="newLocation">New Location:</label><br>
+            <input type="text" id="newLocation" name="newLocation" required><br>
+            <label for="newDate">New Date:</label><br>
+            <input type="date" id="newDate" name="newDate" required><br>
+            <label for="newHour">New Hour:</label><br>
+            <input type="time" id="newHour" name="newHour" required><br>
+            <button type="submit">Update</button>
+            <button type="delete" id="eventDelete" class="deleteEvent">Delete</button>
+          </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <p>&copy; 2024 Julio's Food Truck</p>
+  </footer>
+</body>
+
+</html>

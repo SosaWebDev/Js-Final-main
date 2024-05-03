@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "express": "^4.19.2",
+    "mongodb": "^6.5.0"
+  },
+  "name": "julios-food-truck",
+  "version": "1.1.0",
+  "description": "Website and API for a Food Truck. The site will allow the users to view the menu, and see the events where the food truck will be located. The API will allow the food truck owner to manage the menu and events.",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Julio Sosa",
+  "license": "ISC"
+}
